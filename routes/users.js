@@ -101,7 +101,6 @@ router.post('/login', function (req, res) {
     'password': req.body.password
   };
 
-  console.log(user.id, user.password)
   database.getConnection((conn) => {
     conn.query(`SELECT id, password FROM users WHERE id = "${user.id}"`, (err, row) => {
       if (err) {
@@ -119,7 +118,7 @@ router.post('/login', function (req, res) {
           //https://blog.logrocket.com/how-to-implement-jwt-authentication-vue-nodejs/ 참조.
 
           if (success) {
-            return res.json({ // 로그인 성공
+          return res.json({ // 로그인 성공
               success: true,
               message: 'Login successful!',
               token: token,

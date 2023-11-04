@@ -4,13 +4,11 @@ import fs from 'fs'
 import dotenv from 'dotenv'
 dotenv.config()
 
-const publicKeyPath = process.env.Token_public
-const privateKeyPath = process.env.Token_private
+const publicKeyPath = process.env.TOKEN_PUBLIC
+const privateKeyPath = process.env.TOKEN_PRIVATE
 
 const publicKey = fs.readFileSync(publicKeyPath, 'utf8');
 const privateKey = fs.readFileSync(privateKeyPath, 'utf8');
-console.log(publicKey)
-console.log(privateKey)
 
 const i = 'jwt-node'
 const s = 'jwt-node'

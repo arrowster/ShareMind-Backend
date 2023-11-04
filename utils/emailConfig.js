@@ -6,14 +6,12 @@ dotenv.config();
 const smtpTransport = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: process.env.Email_id,
-        pass: process.env.Email_password,
+        user: process.env.EMAIL_ID,
+        pass: process.env.EMAIL_PASSWORD,
     },
 });
 
 const sendEmail = async (sendEmail) => {
-    console.log( process.env.Email_id)
-    console.log( process.env.Email_password)
     const generateRandom = (min, max) => {
         const ranNum = Math.floor(Math.random() * (max - min + 1)) + min;
         return ranNum;

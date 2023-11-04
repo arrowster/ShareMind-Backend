@@ -7,10 +7,13 @@
   },
   "type": "module",
   "dependencies": {
+    "@stomp/stompjs": "^7.0.0",
+    "amqplib": "^0.10.3",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
@@ -19,6 +22,9 @@
     "morgan": "~1.9.1",
     "mysql2": "^3.6.1",
     "nodemailer": "^6.9.5",
-    "uuid": "^9.0.1"
+    "pug": "^3.0.2",
+    "socket.io": "^4.7.2",
+    "uuid": "^9.0.1",
+    "ws": "^8.14.2"
   }
 }
