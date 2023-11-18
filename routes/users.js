@@ -82,12 +82,12 @@ router.post('/signUp', (req, res) => {
         })
         res.json({
           success: true,
-          message: 'Sing Up Success!'
+          message: '회원가입 성공!'
         })
       } else {
         res.json({
           success: false,
-          message: 'Sign Up Failed Please use another ID'
+          message: '회원가입 실패 다른 email을 사용해주세요'
         })
       }
     })
@@ -120,13 +120,14 @@ router.post('/login', function (req, res) {
           if (success) {
           return res.json({ // 로그인 성공
               success: true,
-              message: 'Login successful!',
+              message: '로그인 성공',
+              id: user.id,
               token: token,
             })
           } else {
             return res.json({ // 매칭되는 아이디는 있으나, 비밀번호가 틀린 경우
               success: false,
-              message: 'Login failed please check your password!'
+              message: '로그인 실패 비밀번호를 확인해주세요'
             })
           }
         })

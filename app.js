@@ -10,7 +10,7 @@ dotenv.config()
 
 import indexRouter from './routes/index.js';
 import usersRouter from "./routes/users.js";
-import mqRouter from './routes/mq.js'
+import roomRouter from './routes/room.js'
 
 
 const app = express();
@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/mq', mqRouter);
+app.use('/room', roomRouter);
 
 console.log('서버 ON')
 
